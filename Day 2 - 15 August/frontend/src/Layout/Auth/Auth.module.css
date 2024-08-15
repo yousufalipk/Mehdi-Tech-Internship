@@ -1,0 +1,32 @@
+.heading {
+    color: purple;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.buttons{
+    display: flex;
+    width: 35%;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #006d77;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    background-color: #008891;
+    cursor: pointer;
+}
