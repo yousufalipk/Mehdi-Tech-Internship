@@ -1,0 +1,14 @@
+17 August 
+
+
+Working ...
+-> Frontend Logic for Authentication 
+-> Frontend Auth / Admin Page 
+-> Login / Registration Froms with validation 
+
+
+
+Pending...
+-> Implement Otp 
+-> Form Validation
+-> Alerts using toast 

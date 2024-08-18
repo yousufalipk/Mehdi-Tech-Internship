@@ -1,0 +1,6 @@
+// Store userId in localStorage
+    localStorage.setItem('userId', response.data.user._id);
+
+
+const userId = localStorage.getItem('userId');
+console.log('User ID:', userId);

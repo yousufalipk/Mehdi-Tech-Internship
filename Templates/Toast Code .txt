@@ -1,0 +1,19 @@
+Setup in APP.js
+
+//React Toast Setup
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+ <ToastContainer />
+
+
+//Success 
+
+//Error 
+
+
+ toast.success('Request was successful!');
+
+
+ toast.error('Request failed. Please try again.');

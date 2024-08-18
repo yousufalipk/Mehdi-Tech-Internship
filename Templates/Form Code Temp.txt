@@ -1,0 +1,67 @@
+import React, {useState} from 'react';
+import styles from './LoginForm.module.css';
+
+const LoginForm = () => {
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleLogin = (e)=>{
+        e.preventDefault(); 
+
+        //Login logic
+        
+
+        //Clears Form Data
+        setFormData({
+            email: '',
+            password: ''
+        });
+    }
+
+    return (
+        <> 
+            <div className={styles.container}>
+                <h3 className={styles.heading}>Login Form</h3>
+                <form onSubmit={handleLogin}>
+                    <div className={styles.box}>
+                        <input 
+                            type='text' 
+                            id='email' 
+                            name='email' 
+                            placeholder='Email' 
+                            onChange={handleChange}
+                            value={formData.email}
+                        />
+
+                        <input 
+                            type='password' 
+                            id='password' 
+                            name='password' 
+                            placeholder='Password' 
+                            onChange={handleChange}
+                            value={formData.password}
+                        />
+                        
+                        <button className={styles.btn}
+                            type='submit'
+                        > 
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </>
+    )
+}
+
+export default LoginForm

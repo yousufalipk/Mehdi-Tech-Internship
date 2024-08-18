@@ -1,0 +1,99 @@
+import React, {useState} from 'react';
+import styles from './RegisterForm.module.css';
+
+const RegisterFrom = () => {
+    const [formData, setFormData] = useState({
+      fname: '',
+      lname: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleRegister = (e)=>{
+        e.preventDefault(); 
+
+        //Registration logic
+        console.log("Registring User...");
+        console.log("Form Data: ", formData);
+
+        //Clears Form Data
+        setFormData({
+            fname: '',
+            lname: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+        });
+    }
+
+    return (
+        <> 
+            <div className={styles.container}>
+                <h3 className={styles.heading}>Registration Form</h3>
+                <form onSubmit={handleRegister} className={styles.box}>
+                    <input 
+                        type='text' 
+                        id='fname' 
+                        name='fname' 
+                        placeholder='First Name' 
+                        onChange={handleChange}
+                        value={formData.fname}
+                    />
+
+                    <input 
+                        type='text' 
+                        id='lname' 
+                        name='lname' 
+                        placeholder='Last Name' 
+                        onChange={handleChange}
+                        value={formData.lname}
+                    />
+
+                    <input 
+                        type='text' 
+                        id='email' 
+                        name='email' 
+                        placeholder='Email' 
+                        onChange={handleChange}
+                        value={formData.email}
+                    />
+
+                    <input 
+                        type='password' 
+                        id='password' 
+                        name='password' 
+                        placeholder='Password' 
+                        onChange={handleChange}
+                        value={formData.password}
+                    />
+
+                    <input 
+                        type='password' 
+                        id='confirmPassword' 
+                        name='confirmPassword' 
+                        placeholder='Confirm Password' 
+                        onChange={handleChange}
+                        value={formData.confirmPassword}
+                    />
+                    
+                    <button className={styles.btn}
+                        type='submit'
+                    > 
+                        Create Account
+                    </button>
+                </form>
+            </div>
+        </>
+    )
+}
+
+export default RegisterFrom;

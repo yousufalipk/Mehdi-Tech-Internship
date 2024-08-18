@@ -1,0 +1,7 @@
+const response = await axios.post(`${apiUrl}/login-user`, {
+    email: formData.email,
+    password: formData.password
+}, {
+    withCredentials: true // This allows cookies to be sent and received
+});
+

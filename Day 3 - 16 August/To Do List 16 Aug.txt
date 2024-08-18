@@ -1,0 +1,8 @@
+To Dos List
+
+-> Create & Setup node backend 
+-> Connect Mongo.db 
+-> Create Routes & API (Create User, Login User, Logout User, Getting Expenses, Add Expense)
+-> Connect Backend with frontend using cors
+-> Implement Authnetication using JWT Token methods 
+

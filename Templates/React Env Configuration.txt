@@ -1,0 +1,9 @@
+-> Create .env file in root direcotry 
+
+Name the variable as REACT_APP_xyz
+
+REACT_APP_API_URL=http://localhost:8080/api/v1 
+
+
+/Access env variable
+const apiUrl = process.env.REACT_APP_API_URL;
