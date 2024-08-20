@@ -1,18 +1,21 @@
 import React from 'react';
+import {Routes, Route} from 'react-router-dom';
 
 import SideBar from '../../Components/SideBar/SideBar';
+
+import HomePage from '../../Pages/HomePage/HomePage';
 
 const AdminLayout = (props) => {
   return (
     <>  
         {/* Side Bar */}
-        <div>
-          <div className='bg-gray-200 w-1/5 px-5 py-5'>
+        <div className='flex flex-row'>
+          <div className='w-1/5'>
             <SideBar setAuth={props.setAuth}/>
           </div> 
           {/* Content */}
-          <div className='border-2 border-[gold]'> 
-
+          <div className='p-10 w-full'> 
+          <HomePage />
           </div>
         </div>
     </>

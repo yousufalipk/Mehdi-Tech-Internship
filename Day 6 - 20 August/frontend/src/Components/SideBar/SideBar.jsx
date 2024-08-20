@@ -41,24 +41,27 @@ const SideBar = (props) => {
 
   return (
     <>
-      <div className='flex flex-col justify-between h-screen'>
+      <div className='flex flex-col justify-between h-screen bg-gray-200'>
         {/* Logo */}
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center mt-4'>
           <Link to='/'>
             <img src={Logo} alt="Logo" className='w-24 h-24' />
           </Link>
 
           {/* Menu*/}
-          <div className='flex flex-col mt-4'>
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/users'>Users</Link>
+          <div className='flex flex-col mt-4 w-full'>
+            <Link className='w-full py-5 px-10' to='/'>Home</Link>
+            <hr className='border-1 border-[gray] w-4/5 mx-auto'/>
+            <Link className='w-full py-5 px-10' to='/about'>About</Link>
+            <hr className='border-1 border-[gray] w-4/5 mx-auto'/>
+            <Link className='w-full py-5 px-10' to='/users'>Users</Link>
+            <hr className='border-1 border-[gray] w-4/5 mx-auto'/>
           </div>
         </div>
 
         {/* Logout button*/}
-        <div className='my-10 mx-3'>
-          <button className='flex flex-row' onClick={handleLogOut}>
+        <div className='my-10 w-full'>
+          <button className='flex flex-row px-10 py-5 w-full' onClick={handleLogOut}>
             Log Out <FiLogOut className='mx-3 mt-1' />
           </button>
         </div>
