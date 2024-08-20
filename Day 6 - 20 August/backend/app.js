@@ -5,12 +5,13 @@ const cors = require('cors');
 
 const user = require ('./Routes/userRoutes');
 
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN;
+
 const app = express();
 
-// Middleware setup
 // CORS configuration
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: FRONTEND_ORIGIN,
     credentials: true
 }));
 
