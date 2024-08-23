@@ -1,0 +1,15 @@
+import { useParams } from 'react-router-dom';
+ 
+
+
+const { classId, courseId } = useParams();
+
+
+{
+    path: "/announcement-student/:classId/:courseId",
+    //name: "Course Announcements",
+    icon: "ni ni-single-02 text-yellow",
+    component: <CourseStudentAnoucement />,
+    layout: "/admin",
+  },
+
